@@ -117,21 +117,25 @@ std::pair<int, int> API::getDirection(int direction, int dest) {
         if(dest == 0) return {0, 1};
         if(dest == 1) return {1, 0};
         if(dest == 2) return {-1, 0};
+        if (dest == 3) return {0, -1};
     }
     else if(direction == 1){
         if(dest == 0) return {1, 0};
         if(dest == 1) return {0, -1};
         if(dest == 2) return {0, 1};
+        if (dest == 3) return {-1, 0};
     }
     else if(direction == 2){
         if(dest == 0) return {0, -1};
         if(dest == 1) return {-1, 0};
         if(dest == 2) return {1, 0};
+        if(dest == 3) return {0, 1};
     }
     else{
         if(dest == 0) return {-1, 0};
         if(dest == 1) return {0, 1};
         if(dest == 2) return {0, -1};
+        if(dest == 3) return {1, 0};
     }
     assert(false);
     return {-1, -1};
